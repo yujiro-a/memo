@@ -10,7 +10,7 @@ while true do
     puts "メモしたい内容を記入してください。"
     puts "完了したらCtrl + Dを押します。"
   
-    CSV.open("#{text}.txt","w") do |memo|
+    CSV.open("#{text}.csv","w") do |memo|
       while memo_text = gets
         memo << [memo_text.chomp]
       end
@@ -22,7 +22,7 @@ while true do
     text = gets.chomp
     puts "メモしたい内容を記入してください。"
     puts "完了したらCtrl + Dを押します。"
-    CSV.open("#{text}.txt","a") do |memo|
+    CSV.open("#{text}.csv","a") do |memo|
       while memo_text = gets
         memo << [memo_text.chomp]
       end
